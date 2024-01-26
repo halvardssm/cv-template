@@ -1,0 +1,25 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
