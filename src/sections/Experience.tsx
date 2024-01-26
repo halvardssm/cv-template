@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Section from "../components/Section";
+import { experienceLines } from "../config";
 
 type ExperienceLine = {
   positions: {
@@ -25,37 +26,6 @@ type ExperienceLine = {
    */
   company: string;
 };
-
-const lines: ExperienceLine[] = [
-  {
-    company: "Microsoft",
-    positions: [
-      {
-        title: "Software Engineer",
-        location: "Europe",
-        period: "2022-present",
-        description: ["Mentored interns"],
-      },
-    ],
-  },
-  {
-    company: "GitHub",
-    positions: [
-      {
-        title: "Software Engineer",
-        period: "2021-2022",
-        location: "Europe",
-        description: ["Built web applications using React and TypeScript"],
-      },
-      {
-        title: "Junior Software Engineer",
-        period: "2020-2021",
-        location: "Berlin, Germany",
-        description: ["Learned coding"],
-      },
-    ],
-  },
-];
 
 const ExperienceElement: FC<ExperienceLine> = (props) => {
   return (
@@ -97,7 +67,7 @@ function Experience() {
       title="Experience"
       style={{ display: "flex", flexDirection: "column", gap: "0.7em" }}
     >
-      {lines.map((line) => (
+      {experienceLines.map((line) => (
         <ExperienceElement {...line} />
       ))}
     </Section>

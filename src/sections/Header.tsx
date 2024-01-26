@@ -1,5 +1,21 @@
 import { FeatherIconNames } from "feather-icons";
 import Emoji from "../components/Emoji";
+import { headerElements, name } from "../config";
+
+export type HeaderElement = {
+  /**
+   * Icon name from Feather Icons, e.g. "github"
+   */
+  icon: FeatherIconNames;
+  /**
+   * Text to display, e.g. "GitHub"
+   */
+  text: string;
+  /**
+   * Optional link, e.g. "https://github.com"
+   */
+  link?: string;
+};
 
 function IconElement(props: {
   icon: FeatherIconNames;
@@ -31,7 +47,7 @@ function Header() {
         alignItems: "flex-end",
       }}
     >
-      <h1>Name</h1>
+      <h1>{name}</h1>
       <div
         style={{
           display: "flex",
@@ -40,23 +56,9 @@ function Header() {
           margin: "1.67em 0",
         }}
       >
-        <IconElement icon="map-pin" text="Someplace, Europe" />
-        <IconElement
-          icon="globe"
-          text="example.com"
-          link="https://example.com"
-        />
-        <IconElement
-          icon="mail"
-          text="work@example.com"
-          link="mailto:work@example.com"
-        />
-        <IconElement
-          icon="linkedin"
-          text="linkedin"
-          link="https://www.linkedin.com/in"
-        />
-        <IconElement icon="github" text="github" link="https://github.com" />
+        {headerElements.map((element) => (
+          <IconElement {...element} />
+        ))}
       </div>
     </div>
   );

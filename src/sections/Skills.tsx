@@ -1,41 +1,26 @@
 import { FC } from "react";
 import Section from "../components/Section";
+import { skillsSections } from "../config";
 
 type SkillSection = {
+  /**
+   * Section title, e.g. "Programming languages"
+   */
   title: string;
+  /**
+   * List of skills
+   */
   skills: {
+    /**
+     * Skill title, e.g. "Frontend"
+     */
     title?: string;
+    /**
+     * Skill elements, e.g. ["React", "Vue", "Angular"]
+     */
     elements: string[];
   }[];
 };
-
-const sections: SkillSection[] = [
-  {
-    title: "JavaScript",
-    skills: [
-      {
-        elements: ["TypeScript", "Node", "Deno"],
-      },
-    ],
-  },
-  {
-    title: "Databases",
-    skills: [
-      {
-        elements: ["PostgreSQL", "SQLite"],
-      },
-    ],
-  },
-  {
-    title: "Other",
-    skills: [
-      {
-        title: "Languages",
-        elements: ["English"],
-      },
-    ],
-  },
-];
 
 const SkillSection: FC<SkillSection> = (props) => {
   return (
@@ -56,7 +41,7 @@ const SkillSection: FC<SkillSection> = (props) => {
 function Skills() {
   return (
     <Section title="Skills">
-      {sections.map((section) => (
+      {skillsSections.map((section) => (
         <SkillSection {...section} />
       ))}
     </Section>
