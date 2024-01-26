@@ -1,0 +1,6 @@
+node_modules
+dist
+.yarn
+build
+public/build
+src/main.tsx
