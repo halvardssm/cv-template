@@ -6,7 +6,7 @@ export type EducationLine = {
   /**
    * Institution name, e.g. "University of Education"
    */
-  instiution: string;
+  institution: string;
   /**
    * Institution location, e.g. "Oslo, Norway"
    */
@@ -22,7 +22,7 @@ const EducationElement: FC<EducationLine> = (props) => {
     <div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div>
-          <b>{props.instiution}</b>
+          <b>{props.institution}</b>
         </div>
         <div>{props.location}</div>
       </div>

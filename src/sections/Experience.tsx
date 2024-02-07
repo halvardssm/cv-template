@@ -2,7 +2,7 @@ import { FC } from "react";
 import Section from "../components/Section";
 import { experienceLines } from "../config";
 
-type ExperienceLine = {
+export type ExperienceLine = {
   positions: {
     /**
      * Job title, e.g. "Software Engineer"

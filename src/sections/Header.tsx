@@ -30,7 +30,7 @@ function IconElement(props: {
     props.text
   );
   return (
-    <span style={{ display: "inline-block" }}>
+    <span style={{ whiteSpace: "nowrap" }}>
       <Emoji icon={props.icon} />
       {content}
     </span>
@@ -42,18 +42,18 @@ function Header() {
     <div
       style={{
         display: "flex",
-        justifyContent: "left",
-        gap: "1.5em",
-        alignItems: "flex-end",
+        justifyContent: "space-between",
+        rowGap: "0.3em",
+        alignItems: "baseline",
+        flexWrap: "wrap",
+        marginBottom: "1em",
       }}
     >
-      <h1>{name}</h1>
+      <h1 style={{ whiteSpace: "nowrap", margin: 0 }}>{name}</h1>
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
-          gap: "1.5em",
-          margin: "1.67em 0",
+          columnGap: "1em",
         }}
       >
         {headerElements.map((element) => (

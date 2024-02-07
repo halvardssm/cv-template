@@ -79,7 +79,7 @@ export const experienceLines: ExperienceLine[] = [
 
 export const educationLines: EducationLine[] = [
   {
-    instiution: "Some University",
+    institution: "Some University",
     location: "Europe",
     description: "Computer Science",
   },

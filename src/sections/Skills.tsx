@@ -2,7 +2,7 @@ import { FC } from "react";
 import Section from "../components/Section";
 import { skillsSections } from "../config";
 
-type SkillSection = {
+export type SkillSection = {
   /**
    * Section title, e.g. "Programming languages"
    */
